@@ -25,8 +25,8 @@ def igraj(n):
     oblika = False
     while not oblika:
       # ugib = input(f"{i}/10. Ugibaj: ")
-      ugib = st.text_input(f"{i}/10. Ugibaj: ","",key = count)
-      count+=1
+      ugib = st.text_input(f"{i}/10. Ugibaj: ","")
+      # count+=1
       if ugib!="":
           if len(ugib) != n:
             st.write(f"Beseda ni prave dolžine ({n}). Poskusi ponovno.")
@@ -49,6 +49,7 @@ def igraj(n):
     if "💛" not in prikaz and "🖤" not in prikaz:
       st.write("Bravo!")
       win=True
+      break
     else:
       st.write(prikaz)
   if win==False:
