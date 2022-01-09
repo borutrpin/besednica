@@ -30,13 +30,13 @@ def igraj(n):
       if ugib!="":
           if len(ugib) != n:
             st.write(f"Beseda ni prave dolžine ({n}). Poskusi ponovno.")
-            count+=1
+            # count+=1
           elif ugib in seznam_besed:
             oblika = True
-            count+=1
+            # count+=1
           else:
             st.write(f"Besede \"{ugib}\" ni v slovarju. Poskusi ponovno.")
-            count+=1
+            # count+=1
     
     prikaz = ""
     for poz, letter in enumerate(ugib):
@@ -54,7 +54,7 @@ def igraj(n):
   if win==False:
       st.write(f"Pravilen odgovor je bil: \"{beseda}\".")
 
-agree = st.checkbox('Gremo')
+agree = st.checkbox('Poskusimo...')
 
 if agree:
      igraj(5)
