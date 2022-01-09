@@ -48,7 +48,11 @@ def igraj(n):
       st.write(prikaz)
   if win==False:
       st.write(f"Pravilen odgovor je bil: \"{beseda}\".")
-     
-igraj(5)
+
+agree = st.checkbox('Gremo')
+
+if agree:
+     igraj(5)
+# igraj(5)
 
 
