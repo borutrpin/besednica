@@ -214,6 +214,7 @@ if agree:
             st.write(ugib)
             st.write(prikaz)
             nadaljuj=1
+            st.write("Prava beseda je bila \"{beseda}\".")
 # igraj(5)
 
 
