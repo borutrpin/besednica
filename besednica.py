@@ -54,7 +54,7 @@ def igraj(n,m):
       st.write(f"Pravilen odgovor je bil: \"{beseda}\".")
 
 agree = st.checkbox('Poskusimo...')
-številka=int(st.number_input("Uganka številka koliko? Med 0 in 12862",value=4000))
+številka=int(st.number_input("Uganka številka koliko? Med 0 in 12862",value=110))
 
 if agree:
     igraj(5,številka)
