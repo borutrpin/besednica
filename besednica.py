@@ -19,17 +19,20 @@ def igraj(n):
   seznam_besed = vrni_slovar(n)
   win=False
   beseda = random.choice(seznam_besed)
-  # print(beseda)
+  # st.write(beseda)
   for i in range(1,11):
     oblika = False
     while not oblika:
-      ugib = input(f"{i}/10. Ugibaj: ")
-      if len(ugib) != n:
-        print(f"Beseda ni prave dolžine ({n}). Poskusi ponovno.")
-      elif ugib in seznam_besed:
-        oblika = True
-      else:
-        print(f"Besede \"{ugib}\" ni v slovarju. Poskusi ponovno.")
+      # ugib = input(f"{i}/10. Ugibaj: ")
+      ugib = st.text_input(f"{i}/10. Ugibaj: ","")
+      if ugib!="":
+          if len(ugib) != n:
+            st.write(f"Beseda ni prave dolžine ({n}). Poskusi ponovno.")
+          elif ugib in seznam_besed:
+            oblika = True
+          else:
+            st.write(f"Besede \"{ugib}\" ni v slovarju. Poskusi ponovno.")
+    
     prikaz = ""
     for poz, letter in enumerate(ugib):
       if ugib[poz] == beseda[poz]:
@@ -39,15 +42,13 @@ def igraj(n):
       else:
         prikaz += "🖤"
     if "💛" not in prikaz and "🖤" not in prikaz:
-      print("Bravo!")
+      st.write("Bravo!")
       win=True
     else:
-      print(prikaz)
+      st.write(prikaz)
   if win==False:
-      print(f"Pravilen odgovor je bil: \"{beseda}\".")
+      st.write(f"Pravilen odgovor je bil: \"{beseda}\".")
      
-
-# n = int(input("Ka? "))
 igraj(5)
 
 
