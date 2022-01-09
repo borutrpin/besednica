@@ -8,6 +8,7 @@ layout="wide"
 )
 
 st.write("Ugibaj besedo!")
+st.write("pozor: samo male črke...")
 def vrni_slovar(dolzina):
   slovar = open("besede.txt")
   besede = slovar.readlines()
