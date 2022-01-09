@@ -45,14 +45,16 @@ def igraj(n,m):
         prikaz += "🖤"
     if "💛" not in prikaz and "🖤" not in prikaz:
       st.write("Bravo!")
+      st.write("💚💚💚💚💚")
       win=True
+      break
     else:
       st.write(prikaz)
   if win==False:
       st.write(f"Pravilen odgovor je bil: \"{beseda}\".")
 
 agree = st.checkbox('Poskusimo...')
-številka=int(st.number_input("Uganka številka koliko? Med 0 in 12862",value=5000))
+številka=int(st.number_input("Uganka številka koliko? Med 0 in 12862",value=4000))
 
 if agree:
     igraj(5,številka)
