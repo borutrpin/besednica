@@ -21,11 +21,11 @@ def igraj(n,m):
   win=False
   beseda = seznam_besed[m]
   # st.write(beseda)
-  for i in range(1,11):
+  for i in range(1,7):
     oblika = False
     while not oblika:
       # ugib = input(f"{i}/10. Ugibaj: ")
-      ugib = st.text_input(f"{i}/10. Ugibaj: ","")
+      ugib = st.text_input(f"{i}/6. Ugibaj: ","")
       if ugib!="":
           if len(ugib) != n:
             st.write(f"Beseda ni prave dolžine ({n}). Poskusi ponovno.")
@@ -39,6 +39,7 @@ def igraj(n,m):
       if ugib[poz] == beseda[poz]:
         prikaz += "💚"
       elif ugib[poz] in beseda:
+          
         prikaz += "💛"
       else:
         prikaz += "🖤"
