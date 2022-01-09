@@ -18,20 +18,25 @@ def vrni_slovar(dolzina):
 def igraj(n):
   seznam_besed = vrni_slovar(n)
   win=False
+  count=1
   beseda = random.choice(seznam_besed)
   # st.write(beseda)
   for i in range(1,11):
     oblika = False
     while not oblika:
       # ugib = input(f"{i}/10. Ugibaj: ")
-      ugib = st.text_input(f"{i}/10. Ugibaj: ","")
+      ugib = st.text_input(f"{i}/10. Ugibaj: ","",key = count)
+      count+=1
       if ugib!="":
           if len(ugib) != n:
             st.write(f"Beseda ni prave dolžine ({n}). Poskusi ponovno.")
+            count+=1
           elif ugib in seznam_besed:
             oblika = True
+            count+=1
           else:
             st.write(f"Besede \"{ugib}\" ni v slovarju. Poskusi ponovno.")
+            count+=1
     
     prikaz = ""
     for poz, letter in enumerate(ugib):
