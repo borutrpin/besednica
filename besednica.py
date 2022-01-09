@@ -17,9 +17,9 @@ def vrni_slovar(dolzina):
   return seznam
 
 
+številka=int(st.number_input("Uganka številka koliko? Med 0 in 12862",value=110))
 
 agree = st.checkbox('Poskusimo...')
-številka=int(st.number_input("Uganka številka koliko? Med 0 in 12862",value=110))
 
 if agree:
     # igraj(5,številka)
@@ -214,7 +214,7 @@ if agree:
             st.write(ugib)
             st.write(prikaz)
             nadaljuj=1
-            st.write("Prava beseda je bila \"{beseda}\".")
+            st.write("Prava beseda je bila "+str(beseda)+".")
 # igraj(5)
 
 
